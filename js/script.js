@@ -43,3 +43,63 @@ class MobileNavbar {
   );
   
   mobileNavbar.init();
+
+//MASCARA PARA CPF E CNPJ NO MESMO CAMPO
+
+function mascara_cpf_cnpj() {
+  var cpf_cnpj = document.querySelector("#cpf_cnpj");
+  var ncpf = cpf_cnpj.value.length;
+
+  if (ncpf <= 11) {
+    cpf_cnpj.value = cpf_cnpj.value.replace(
+      /^(\d{3})(\d{3})(\d{3})(\d{2})/,
+      "$1.$2.$3-$4"
+    );
+  } else if (ncpf > 11) {
+    cpf_cnpj.value = cpf_cnpj.value.replace(
+      /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/,
+      "$1.$2.$3/$4-$5"
+    );
+  }
+}
+
+//MASCARA TELEFONE
+
+function mascara_fone() {
+  var fone = document.querySelector("#fone");
+  var nfone = fone.value.length;
+
+  if(nfone == 1){
+    fone.value = `(${fone.value}`
+  }else if(nfone == 3){
+    fone.value += ") "
+  }else if(nfone == 6){
+    fone.value += " "
+  }else if(nfone == 11){
+    fone.value += "-"
+  }
+  
+}
+
+function mascara_cep() {
+  var cep = document.querySelector("#cep");
+  var ncep = cep.value.length;
+
+  if(ncep == 5){
+    cep.value += "-"
+  }
+  
+}
+
+//ESCONDER IMPUT OUTROS ENQUANTO OUTROS NÃO TIVER SELECIONADO NO SELECT MODELO
+
+function esconder() {
+  var outros = document.querySelector("#outros");
+  var estado = document.querySelector("#estado");
+
+  if (estado.value === "Outros") {
+    outros.style.display = "flex";
+  }else{
+    outros.style.display = 'none';
+  }
+}
