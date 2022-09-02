@@ -89,6 +89,7 @@ main{
   .botao{
     display: flex;
     justify-content: center;
+    gap: 20px;
   }
 
   button{
@@ -99,6 +100,27 @@ main{
     font-weight: bold;
     padding: 8px 20px;
     margin-top: 20px;
+    transition: 0.5s;
+  }
+
+  button:hover{
+    transform: scale(1.2);
+    background-color:  rgb(6, 144, 98);;
+  }
+
+  .botao_a{
+    background-color:  rgb(17, 184, 128);;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    margin-top: 20px;
+  }
+
+  .botao_a:hover{
+    transform: scale(1.2);
+    background-color:  rgb(6, 144, 98);;
   }
 
   .nav-list {
@@ -116,6 +138,7 @@ main{
     transform: translateX(-100%);
     transition: transform 0.3s ease-in;
     font-size: 20px;
+    width: 300px;
   }
   
   .nav-list li {
@@ -174,7 +197,7 @@ main{
 
   @media  (max-width: 650px) {
     .nav-list{
-        width: 300px;
+        width: 200px;
     }
 
     .group_elements{
