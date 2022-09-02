@@ -9,7 +9,7 @@ body {
     background-color: #ECECEC;
     height: 100vh;
     display: grid;
-    grid-template-rows: 100px auto; /*divide a pagina*/ 
+    grid-template-rows: 100px auto 80px; /*divide a pagina*/ 
   }
 
 header{
@@ -32,8 +32,10 @@ main{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    padding-top: 15px;
 }
   
+
   .btnimg {
     display: flex;
     align-items: center;
@@ -138,6 +140,12 @@ main{
   .mobile-menu.active .line3 {
     transform: rotate(45deg) translate(-5px, -7px);
   }
+
+  footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
   @media  (min-width: 740px) {
     main{
