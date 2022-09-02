@@ -50,7 +50,7 @@ main{
     width: 150px;
     height: 150px;
     cursor: pointer;
-    transition: all 1s;
+    transition: all 0.5s;
   }
 
   .btnimg:hover{
