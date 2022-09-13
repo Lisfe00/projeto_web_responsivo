@@ -44,7 +44,6 @@ class MobileNavbar {
   
   mobileNavbar.init();
 
-//MASCARA PARA CPF E CNPJ NO MESMO CAMPO
 
 function mascara_cpf_cnpj() {
   var cpf_cnpj = document.querySelector("#cpf_cnpj");
@@ -63,7 +62,6 @@ function mascara_cpf_cnpj() {
   }
 }
 
-//MASCARA TELEFONE
 
 function mascara_fone() {
   var fone = document.querySelector("#fone");
@@ -91,7 +89,6 @@ function mascara_cep() {
   
 }
 
-//ESCONDER IMPUT OUTROS ENQUANTO OUTROS NÃO TIVER SELECIONADO NO SELECT MODELO
 
 function esconder() {
   var outros = document.querySelector("#outros");
@@ -101,5 +98,18 @@ function esconder() {
     outros.style.display = "flex";
   }else{
     outros.style.display = 'none';
+  }
+}
+
+function mostrar_senha() {
+  var tipo = document.querySelector("#senha")
+  var imagem = document.querySelector('#img_cadeado_fechado')
+
+  if(tipo.type === "password"){
+    tipo.type = "text";
+    imagem.style.display = "flex";
+  }else{
+    tipo.type = "password";
+    imagem.style.display = "none";
   }
 }
